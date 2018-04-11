@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginStart="25dp"
+            android:textColor="@android:color/background_dark"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView1"
+            android:layout_marginBottom="10dp"
+            android:text="这东西能告诉你照片里有几根手指(雾\n为了保证识别率 请尽量纵向摆放手指\n(其实是数据增强只做了竖向±20°" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:autoLink="web"
+            android:autoText="true"
+            android:text="PoweredBy Yuandiaodiaodiao\nhttps://github.com/yuandiaodiaodiao"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+
+
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="false"
+            android:layout_centerInParent="false"
+            android:layout_marginTop="0dp" />
+
+
+        <ProgressBar
+            android:visibility="invisible"
+            style="@style/style_progressbar"
+            android:id="@+id/progressBar"
+            android:indeterminateDuration="1700"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_above="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+
+            android:ems="10"
+            android:text="http://yuandiaodiaodiao.cn:1025/finger" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
